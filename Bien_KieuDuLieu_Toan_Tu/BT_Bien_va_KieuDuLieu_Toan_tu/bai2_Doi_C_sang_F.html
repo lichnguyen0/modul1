@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi nhiệt độ C sang F </title>
+    <!-- Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit). [Hướng dẫn: C/5 = (F-32)/9]
+  Học viên tham khảo ứng dụng chuyển đổi nhiệt độ tại-->
+</head>
+<body>
+<label for="doisang">Nhập độ C để đổi sang độ F</label>
+<input type="number" id="doisang">
+<button onclick="doisang()">Chuyển</button>
+<p id="result"></p>
+<script>
+    function doisang() {
+        let DoC = parseFloat(document.getElementById('doisang').value);
+        let chuyen = (DoC * 9 / 5) + 32;
+        document.getElementById('result').innerHTML = "Độ F là :" + chuyen;
+    }
+</script>
+</body>
+</html>

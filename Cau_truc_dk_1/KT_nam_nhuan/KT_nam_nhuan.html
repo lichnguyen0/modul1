@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành kiểm tra năm nhuận</title>
+</head>
+<body>
+<script>
+    let Year = parseInt(prompt("Nhập năm để kiểm tra"));
+
+
+    function namNhuan() {
+
+        if(isNaN(Year) || Number(Year)<=0) ; {
+            alert("Nhập đúng số năm");
+        }
+
+        if (Year % 4 === 0 && Year % 100 !== 0 || Year % 400 === 0) {
+            alert(Year + " Là năm nhuận");
+
+        } else {
+            alert(Year + " Không phải là năm nhuận");
+        }
+    }
+
+    namNhuan();
+
+
+
+</script>
+
+</body>
+</html>

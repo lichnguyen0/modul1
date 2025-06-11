@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập một số nguyên từ 1 đến 7. Dùng switch case để in ra thứ tương ứng trong tuần (Thứ 2 đến Chủ
+        nhật).</title>
+</head>
+<body>
+<input type="number" id="num1">
+<button onclick="chuyen()">chuyển</button>
+<p id="result"></p>
+<script>
+    function chuyen() {
+        let nhan = +document.getElementById("num1").value;
+        let dayname;
+
+        switch (nhan) {
+            case 1:
+                dayname = "thứ 2"
+                break;
+            case 2:
+                dayname = "thứ 3"
+                break;
+            case 3:
+                dayname = "thứ 4"
+                break;
+            case 4:
+                dayname = "thứ 5"
+                break;
+            case 5:
+                dayname = "thứ 6"
+                break;
+            case 6:
+                dayname = "thứ 7"
+                break;
+            case 7:
+                dayname = "chủ nhật"
+                break;
+            default:
+                dayname = "không có"
+
+        }
+        document.getElementById('result').innerHTML = dayname;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành kiểm tra năm nhuận</title>
+</head>
+<body>
+<label for="year">Nhập số sô năm</label> <br>
+<input type="number" id="year"> <br>
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+
+<script>
+    function kiemtra() {
+
+        let namNhuan = parseInt(document.getElementById('year').value);
+
+        if (isNaN(namNhuan) || (namNhuan) <= 0) {
+            document.getElementById('ketqua').innerText = 'Nhập lại số năm';
+        }
+
+        if (namNhuan % 4 === 0 && namNhuan % 100 !== 0 || namNhuan % 400 === 0) {
+            document.getElementById('ketqua').innerText = namNhuan + 'Là năm nhuận';
+        } else {
+            document.getElementById('ketqua').innerText = "Không phải là năm nhuận";
+        }
+
+
+    }
+</script>
+</body>
+</html>

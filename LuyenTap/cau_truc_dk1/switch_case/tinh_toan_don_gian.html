@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Viết chương trình tính toán đơn giản: người dùng nhập 2 số và chọn phép toán (+, -, *, /) bằng switch case.</title>
+</head>
+<body>
+<script>
+  let a= parseInt(prompt("nhập so a"));
+  let b= parseInt(prompt("nhập vào số b"))
+  let tinh =prompt("nhập +, -, *, / nếu muốn tính")
+  let ketqua;
+  switch(tinh) {
+      case "+": ketqua= a+b;
+      break;
+      case "-": ketqua= a-b;
+      break;
+      case "*": ketqua= a*b;
+      break;
+      case "/": ketqua= a/b;
+      break;
+  }alert(ketqua)
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3:
+      Nhập vào một số từ 1 đến 5. In ra đánh giá tương ứng:</title>
+</head>
+<body>
+<script>
+  /* 1: Rất kém
+
+  2: Kém
+
+  3: Trung bình
+
+  4: Khá
+
+  5: Giỏi*/
+
+   let xeploai= parseInt(prompt("Nhập vào 1 -5 để đánh giá"))
+  let danhgia;
+
+   switch (xeploai) {
+     case 1: danhgia= "RẤT KÉM";
+     break;
+     case 2: danhgia= " KÉM"
+           break;
+     case 3: danhgia= "TRUNG BÌNH"
+           break;
+     case 4: danhgia= "KHÁ"
+           break;
+     case 5: danhgia= "GIỎI"
+           break;
+     default: danhgia= "BẠN ĐÃ NHẬP SAI"
+
+   }alert(danhgia)
+
+</script>
+</body>
+</html>

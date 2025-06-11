@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhap a"));
+    let b = parseInt(prompt("nhap b"));
+    let c = parseInt(prompt("nhap c"));
+
+    if (a > 0 && a + b > c) {
+        if (b > 0 && b + c > a) {
+            if (c > 0 && c + a > b) {
+                alert("la tam giac")
+            } else {
+                alert("khong phai tam giac")
+            }
+        } else {
+            alert("khong phai tam giac")
+        }
+    } else {
+        alert("khong phai tam giac")
+    }
+
+</script>
+</body>
+</html>

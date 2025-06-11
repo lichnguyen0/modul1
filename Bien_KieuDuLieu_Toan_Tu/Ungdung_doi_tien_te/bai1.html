@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<label for="tien">Nhập tiền</label>
+<input type="number" id="tien">
+<p id="result"></p>
+
+<label for="from">From currency</label>
+<select name="tiente" id="from">
+  <option value="VND">VNĐ</option>
+  <option value="USD">USD</option>
+</select>
+
+
+<label for="to">To currency</label>
+<select name="tiente2" id="to">
+  <option value="VND">VNĐ</option>
+  <option value="USD">USD</option>
+</select>
+
+<button onclick="Tinhtien()">Chuyển đổi</button>
+
+<script>
+    function Tinhtien() {
+        let Tien= parseFloat(document.getElementById('tien').value);
+        let From = document.getElementById('from').value;
+        let To = document.getElementById('to').value;
+let ketqua;
+if(From=="VND" && To=="USD"){
+   ketqua= "kết quả:"+(Tien/ 23000).toFixed(2)+ "USD";
+}else if (From=="USD" && To == "VND"){
+    ketqua ="kết quả:"+ (Tien*23000).toLocaleString('vi-VN')+"VNĐ";
+        }else if (From == "VND") {
+    ketqua = "Kết quả: " + Tien + " Đ"
+} else {
+    ketqua = "Kết quả: " + Tien + " $"
+}
+
+document.getElementById('result').innerHTML = ketqua;
+    }
+</script>
+</body>
+</html>

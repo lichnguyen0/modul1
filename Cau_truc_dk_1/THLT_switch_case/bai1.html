@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết lại cấu trúc if sau thành cấu trúc switch</title>
+</head>
+<body>
+<script>
+    let browser = prompt("Enter browser name!");
+    switch (browser) {
+        case "Edge":
+            alert(" you've got the Edge!");
+            break;
+        case "Chrome":
+        case "Firefox":
+        case"safari":
+        case "Opera":
+            alert(" Okay we support these browsers too");
+            break;
+        default:
+            alert('We hope that this page looks ok!');
+    }
+</script>
+</body>
+</html>

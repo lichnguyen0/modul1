@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học</title>
+    <!-- Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học.
+     Sau đó hiển thị điểm trung bình và tổng của những điểm này.-->
+</head>
+<body>
+<script>
+let vatly= parseFloat(prompt("Nhập điểm môn Vật lý"));
+let hoahoc= parseFloat(prompt("Nhập điểm môn hoá học"));
+let sinhhoc= parseFloat(prompt("Nhập điểm môn sinh học"));
+
+let tongdiem = vatly+hoahoc+sinhhoc;
+let diemTB = tongdiem/3;
+
+alert("tổng điểm :"+tongdiem);
+alert("Điểm trung bình :"+ diemTB);
+
+</script>
+</body>
+</html>
