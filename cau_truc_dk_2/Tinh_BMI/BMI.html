@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng cơ thể</title>
+</head>
+<body>
+<label for="weight">NHập cân nặng (kg)</label>
+<input type="number" id="weight"> <br>
+<br>
+<label for="height">Nhập chiều cao (m)</label>
+<input type="number" id ="height"> <br>
+<br>
+<button onclick="test()">Kiểm tra</button>
+
+<p id="reuslt">Kết quả</p>
+<script>
+  function test(){
+    let Weight = parseInt(document.getElementById('weight').value);
+    let Height = parseInt(document.getElementById('height').value);
+    let BMI =   Weight / ( Math.pow(Height, 2) )
+
+    if(BMI <18.5){
+      document.getElementById('reuslt').innerText = 'Kết quả: Nhẹ cân';
+    }else if(BMI <=25.0){
+      document.getElementById('reuslt').innerText = 'Kết quả: Bình thường';
+    } else if(BMI <=30.0){
+      document.getElementById('reuslt').innerText = 'Kết quả: Thừa cân';
+    }else{
+      document.getElementById('reuslt').innerText = 'Kết quả: Béo phì';
+    }
+  }
+</script>
+</body>
+</html>
