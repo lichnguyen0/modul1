@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập câu lệnh Switch case</title>
+</head>
+<body>
+<label for="month"></label>
+<input type="number" id =month >
+
+<button onclick="kiemtra()">Tính số ngày</button>
+
+<h2 id="result">Kết quả</h2>
+<script>
+  //Viết một ứng dụng cho phép tính được số ngày
+  // trong một tháng với giao diện như sau:
+
+ function kiemtra() {
+   let Month = parseInt(document.getElementById('month').value);
+   switch (Month) {
+     case 1:
+     case 3:
+     case 5:
+     case 7:
+     case 8:
+     case 10:
+     case 12: document.getElementById('result').innerText = 'Tháng ' + Month +' có 31 ngày';
+          break;
+     case 4:
+     case 6:
+     case 9:
+       case 11 : document.getElementById('result').innerText = 'Tháng ' + Month + 'có 30 ngày';
+       break;
+     case 2: document.getElementById('result').innerText = 'Tháng ' + Month +' có 28 hoặc 29 ngày';
+
+   }
+ }
+
+</script>
+</body>
+</html>
