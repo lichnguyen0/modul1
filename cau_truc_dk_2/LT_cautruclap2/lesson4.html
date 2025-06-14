@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh diện tích hình chữ nhật</title>
+</head>
+<body>
+<h2>Tính diện tích hình chữ nhật</h2>
+<label for="a">Nhập cạnh a:</label>
+<input type="text" id="a" ><br><br>
+
+<label for="b">Nhập cạnh b:</label>
+<input type="text" id="b"><br><br>
+
+<button onclick="tinhDienTich()">Tính diện tích</button>
+<p id="result"></p>
+
+<script>
+  function tinhDienTich() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+
+    if (!isNaN(a) && !isNaN(b) && a > 0 && b > 0) {
+      let s = a * b;
+      document.getElementById("result").innerText =  "Diện tích hình chữ nhật là:" + s.toFixed(2);
+    } else {
+      document.getElementById("result").innerText =
+              "Vui lòng nhập 2 số hợp lệ và lớn hơn 0.";
+    }
+  }
+</script>
+</body>
+</html>

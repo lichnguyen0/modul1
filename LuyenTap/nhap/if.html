@@ -5,12 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-
+<p id="demo">ket quả</p>
 <script>
-
-let  n,m,l;
-n=1;m=2;l=3;
-document.write(n);
+const person = {firstName: 'John', lastName: 'Doe',
+    age: 50,  gender: 'male'};
+document.getElementById('demo').innerHTML = person.firstName + 'is' + person.lastName+ person.age+ person.gender;
 
 </script>
 </body>

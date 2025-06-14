@@ -11,9 +11,22 @@
   <title>Thực hành Debug</title>
 </head>
 <body>
-<h1>Debug trong JavaScript</h1>
-<button id="myButton">Click Me!</button>
-<script src="script.js"></script>
+<script>
+    let total =0;
+    let number;
+    do {
+        number = +prompt("nhap a")
+        if (isNaN(number)) {
+            break;
+        }
+
+    total += number;
+
+
+    } while (true)
+     document.write(total)
+
+</script>
 </body>
 </html>
 
