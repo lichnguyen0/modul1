@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tạo form đơn giản</title>
+  <style>
+    #checkcolor label{
+      color: darkorange;
+      font-size: 16px;
+      font-family: Arial ;
+    }
+
+    .clor{
+      color: blue;
+      margin-right: 10px;
+      display: inline-block;
+      text-align: center;
+      font-family: Arial
+    }
+    p{
+      color: blue;
+
+    }
+
+    form {
+      background-color: #f0f8ff; /* màu nền bạn muốn */
+      padding: 20px;             /* khoảng cách bên trong form cho đẹp */
+      border-radius: 8px;        /* bo góc nếu muốn */
+      max-width: 500px;          /* giới hạn chiều rộng */
+      margin: auto;              /* căn giữa form trên trang */
+    }
+
+    body {
+      background-color: #d0f0fd; /* Màu nền */
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+<form>
+  <h2 style="background-color: orange; text-align: center;" >Sở thích của bạn</h2>
+  <div class="clor">
+    <label for="username">Họ và tên</label>
+    <input type="text" id="username" ><br><br>
+
+    <label for="email">Email</label>
+    <input type="email" id="email"> <br><br>
+  </div>
+  <p id="col">Sở thích:</p>
+
+
+  <div id="checkcolor">
+    <input type="checkbox" id="sports">
+    <label for="sports">Thể thao</label>
+
+    <input type="checkbox" id="music">
+    <label for="music">Âm nhạc</label>
+
+    <input type="checkbox" id="read">
+    <label for="read">Đọc sách</label> <br>
+
+    <input type="checkbox" id="web">
+    <label for="web">Lướt web</label>
+
+    <input type="checkbox" id="game">
+    <label for="game">Chơi game</label>
+
+    <input type="checkbox" id="dienanh">
+    <label for="dienanh">Điện ảnh</label> <br>
+
+    <input type="checkbox" id="travel">
+    <label for="travel">Du lịch</label> <br>
+  </div>
+
+  <button type="submit" id="gửi">Gửi thông tin</button>
+  <button type="reset" id=" nhap">Nhập lại</button>
+
+
+</form>
+</body>
+</html>
