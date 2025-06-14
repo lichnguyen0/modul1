@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập một số nguyên bất kỳ, in ra kết quả để xác định số đó lớn hơn, nhỏ hơn hay bằng 0.</title>
+</head>
+<body>
+<p> Nhap vao mot số</p>
+<input type="number" id="nhap1">
+<button onclick="kiemtra()">kiemtra</button>
+<p>Kết quả: <span id="result"></span></p>
+<script>
+    function kiemtra() {
+        let nhapso = document.getElementById('nhap1').value;
+        let ketqua = document.getElementById('result');
+        if (nhapso > 0) {
+            ketqua.innerText = nhapso + " " + "lớn hơn 0";
+        } else if (nhapso == 0) {
+            ketqua.innerText = nhapso + " " + "Bằng 0";
+        } else {
+            ketqua.innerText = nhapso + " " + "Nhỏ hơn 0"
+        }
+    }
+</script>
+</body>
+</html>

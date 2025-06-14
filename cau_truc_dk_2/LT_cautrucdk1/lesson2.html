@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nhập tuổi, kiểm tra và in kết quả xem học sinh có đủ điều kiện vào học lớp 10 hay không.</title>
+</head>
+<body>
+<label>Nhập tuổi: <input type="text" id="age"> </label>
+<button onclick="Kiemtra()">Kiem tra</button>
+<p>Kết quả: <span id="result"></span></p> <!-- phần này để khi in chữ giữ nguyên kết quả: và in ra kết quả-->
+<script>
+  function Kiemtra() {
+    let nhantuoi = document.getElementById('age').value;
+    let ketqua = document.getElementById('result');
+
+    if (nhantuoi == 15) {
+      document.getElementById('result').innerHTML = "Đủ điều kiện vào lớp 10";
+    } else if (nhantuoi > 15) {
+      ketqua.innerText = " Không đủ điều kiện: quá tuổi";
+    } else if (nhantuoi < 15) {
+      ketqua.innerHTML = " Không đủ điều kiện: Chưa đủ tuổi ";
+    } else {
+      ketqua.innerHTML = " Bạn nhập sai";
+    }
+  }
+</script>
+</body>
+</html>

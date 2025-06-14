@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại học lực của học sinh</title>
+</head>
+<body>
+<label for="diemKt"> Điểm kiểm tra</label>
+<input type="number" id="diemKt" min="0" max="10">
+
+<label for="diemGk">Điểm giữa kỳ</label>
+<input type="number" id="diemGk" min="0" max="10">
+
+<label for="diemCk">Điểm cuối kỳ</label>
+<input type="number" id="diemCk" min="0" max="10">
+
+<button onclick="tinhdiem()">Tính Diểm</button>
+
+<p id="ketqua"></p>
+
+<script>
+    function tinhdiem() {
+        let dkiemtra = parseFloat(document.getElementById('diemKt').value);
+        let dgiuaky = parseFloat(document.getElementById('diemGk').value);
+        let dcuoiky = parseFloat(document.getElementById('diemCk').value);
+        let Dtb = (dkiemtra * 1 + dgiuaky * 2 + dcuoiky * 3) / 6;
+
+        let xeploai;
+
+        if (Dtb >= 8) {
+            xeploai = "Giỏi";
+        } else if (Dtb >= 8.0) {
+            xeploai = "Khá";
+        } else if (Dtb >= 6.5) {
+            xeploai = "Trung bình";
+        } else {
+            xeploai = "Yeu";
+        }
+
+        document.getElementById('ketqua').innerHTML = " Điểm trung bình:" + Dtb + " " + "xếp loại - " + xeploai;
+    }
+
+</script>
+</body>
+</html>
