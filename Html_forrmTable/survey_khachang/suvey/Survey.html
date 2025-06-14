@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Khách Hàng</title>
+</head>
+<body>
+<h2>Market Research Survey</h2>
+<p>Please take a few moments to complete this satisfaction survey.</p>
+<hr>
+
+<div id="incomeBox" style="padding: 0px;">
+    <label for="age" style="font-weight: bold;">What is your age range?</label> <br>
+    <select name="age" id="age" style="width: 390px"
+            onfocus="document.getElementById('incomeBox').style.backgroundColor = '#f5f0b3';"
+            onblur="document.getElementById('incomeBox').style.backgroundColor = 'transparent';">
+        <option value="age1">18-24</option>
+        <option value="age2">25-34</option>
+        <option value="age3">35-50</option>
+        <option value="age4">50+</option>
+    </select>
+</div>
+<br>
+<div id="incomeBox2" style="padding: 0px;">
+    <label for="money" style="font-weight: bold">What is your yearly income range?</label> <br>
+    <select name="money" id="money" style="width: 390px;"
+            onfocus="document.getElementById('incomeBox2').style.backgroundColor = '#f5f0b3';"
+            onblur="document.getElementById('incomeBox2').style.backgroundColor = 'transparent';">
+        <option value="money1">$0 - $25,000</option>
+        <option value="money1">$25,000 - $50,000</option>
+        <option value="money1">$50,000 - $100,000</option>
+        <option value="money1">$100,000+</option>
+    </select>
+</div>
+<br>
+<label for="male" style="font-weight: bold">Gender Identity</label> <br>
+<form id="myform">
+    <input type="radio" name="gender" id="male" value="male">Male <br>
+    <input type="radio" name="gender" id="Female" value="Female">Female <br>
+    <input type="radio" name="gender" id="Nonbinary" value="Nonbinary"> Nonbinary <br>
+    <input type="radio" name="gender" id="Other" value="Other">Other <br>
+    <input type="text" style="margin-left: 20px;" maxlength="200" title="Maximum of 250 characters.">
+    <br>
+    <br>
+    <label for="pro1" style="font-weight: bold">Which of the following products have your purchased in the last 2
+        months.
+        Please check all that apply.</label> <br>
+    <input type="checkbox" id="pro1">Product 1 <br>
+    <input type="checkbox" id="pro2">Product 2 <br>
+    <input type="checkbox" id="pro3">Product 3 <br>
+    <br>
+    <label for="daily" style="font-weight: bold">How often would you use our new product?</label> <br>
+    <input type="radio" id="daily">Daily<br>
+    <input type="radio" id="weekly">Weekly<br>
+    <input type="radio" id="monthly">monthly<br>
+    <br>
+    <div style="display: inline-block; text-align: center; margin-right: 10px;">
+        <span>$</span>
+        <input type="text" id="dollars" style="width: 80px;">
+        <span>.</span>
+        <div>$</div>
+    </div>
+    <div style="display: inline-block; text-align: center;">
+        <input type="text" id="centsInput" style="width: 50px;">
+        <div>Cents</div>
+    </div>
+</form>
+</body>
+</html>
