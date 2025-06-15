@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bảng cửu chương</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            text-align: center;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<table id="myTable">
+
+</table>
+<script>
+    let nhan= "";
+    for (let i = 1; i <= 9; i++) {
+        nhan += '<tr>';
+        for (let j = 2; j <= 9; j++) {
+            nhan += "<td>";
+            nhan += j +"x"+i + "="+(j*i)
+            nhan += '</td>'
+        }
+        nhan += "</tr>";
+    }
+    document.getElementById("myTable").innerHTML = nhan;
+</script>
+</body>
+</html>
+</body>
+</html>
