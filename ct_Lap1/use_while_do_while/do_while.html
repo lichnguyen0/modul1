@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do-While</title>
+</head>
+<body>
+<!--Vòng lặp do-while là một biến thể của vòng lặp while, trong đó biểu thức điều kiện được đánh giá sau khi-->
+<!--thân vòng lặp được thực thi. Do đó, các đoạn mã trong thân vòng lặp được thực thi ít nhất là 1 lần (khi biểu -->
+<!--thức điều kiện bị sai ngay từ đầu).-->
+<!--Cú pháp của vòng lặp do-while:-->
+<!--
+do {
+ mã lặp
+}
+while (điều kiện tiếp diễn);
+-->
+<!--Trong đó:-->
+<!--condition là điều kiện của vòng lặp.-->
+<!--Nếu điều kiện này đúng thì vòng lặp tiếp tục thực thi. Nếu điều kiện này sai thì vòng lặp kết thúc.-->
+<script>
+  let text = "";
+  let i = 0;
+  do {
+    text += "The number is " + i + "<br>";
+    i++;
+  }
+  while (i < 10);
+  document.write(text);
+
+  // Trong đó:
+  //         i < 10 là điều kiện của vòng lặp
+  // Kết quả của đoạn mã trên là: đến 9
+  // Kể cả khi điều kiện sai ngay từ đầu thì vòng lặp cũng được thực thi ít nhất là 1 lần, ví dụ:
+
+</script>
+</body>
+</html>

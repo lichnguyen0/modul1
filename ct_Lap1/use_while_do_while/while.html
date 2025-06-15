@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng vòng lặp While & Do while</title>
+</head>
+<body>
+<script>
+    // Vòng lặp while sẽ thực thi đoạn mã bên trong nó nếu điều kiện đưa ra là đúng.
+    // Cú pháp:
+    /*
+    while (điều kiện tiếp diễn) {
+      // đoạn mã được thực thi lặp đi lặp lại
+    }
+    */
+    // // Trong đó:
+    // //     điều kiện tiếp diễn là điều kiện của vòng lặp.
+    // //     Nếu điều kiện đúng thì đoạn mã bên trong thân vòng lặp sẽ được thực thi.
+    // //     Nếu điều kiện sai thì vòng lặp sẽ kết thúc.
+    //
+    // Chẳng hạn:
+        let text = "";
+    let i = 0;
+    while (i < 10) {
+        text += "The number is " + i + "<br>";
+        i++;
+    }
+    document.write(text);
+
+    // Trong đoạn mã trên:
+    //
+    //     Điều kiện của vòng lặp là biểu thức i < 10. Tức là với các giá trị i nhỏ hơn 10
+    // thì đoạn mã bên trong vòng lặp sẽ được thực thi. Trong trường hợp i bằng 10 (hoặc lớn hơn)
+    // thì vòng lặp kết thúc.
+    //
+    //     Kết quả của đoạn mã trên là: 9
+</script>
+</body>
+</html>
