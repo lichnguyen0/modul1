@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ độ C sang độ F.</title>
+</head>
+<body>
+<h2>Chuyển từ độ C sang độ F</h2>
+<label for="doC">Nhập nhiệt độ C:</label>
+<input type="text" id="doC">
+<button onclick="chuyenDoiNhietDo()">Chuyển đổi</button>
+<p id="result"></p>
+<script>
+    function chuyenDoiNhietDo() {
+        let c = document.getElementById("doC").value;
+        let number = parseFloat(c);
+
+        if (!isNaN(number)) {
+            let f = number * 9 / 5 + 32;
+            document.getElementById("result").innerText =  number+ " °C" + "=" + f + "°F";
+        } else {
+            document.getElementById("result").innerText =
+                "Vui lòng nhập một số hợp lệ.";
+        }
+    }
+</script>
+
+</body>
+</html>

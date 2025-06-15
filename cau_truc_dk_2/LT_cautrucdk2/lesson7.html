@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Giải phương trình bậc 2.</title>
+</head>
+<body>
+<h2>Giải phương trình bậc 2:</h2>
+
+<label for="a">Nhập a: </label>
+<input type="number" id="a"><br><br>
+
+<label for="b">Nhập b: </label>
+<input type="number" id="b" ><br><br>
+
+<label for="c">Nhập c: </label>
+<input type="number" id="c"><br><br>
+
+<button onclick="giaiPhuongTrinhBac2()">Giải</button>
+
+<p id="ketqua"></p>
+
+<script>
+    function giaiPhuongTrinhBac2() {
+        const a = parseFloat(document.getElementById("a").value);
+        const b = parseFloat(document.getElementById("b").value);
+        const c = parseFloat(document.getElementById("c").value);
+        const ketquaEl = document.getElementById("ketqua");
+
+        if (a === 0) {
+            ketquaEl.innerText = "Đây không phải phương trình bậc 2, vui lòng nhập a khác 0.";
+            return;
+        }
+
+        const delta = b * b - 4 * a * c;
+
+        if (delta > 0) {
+            const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            ketquaEl.innerText = "Phương trình có 2 nghiệm phân biệt: " + "x₁ " + " = " + x1 + " x₂ " + " = " + x2;
+        } else if (delta === 0) {
+            const x = -b / (2 * a);
+            ketquaEl.innerText = "Phương trình có nghiệm kép:"+ "x" +"=" + x;
+        } else {
+            ketquaEl.innerText = "Phương trình vô nghiệm thực.";
+        }
+    }
+</script>
+</body>
+</html>

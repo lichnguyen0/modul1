@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ mét sang feet</title>
+</head>
+<body>
+<h2>Chuyển đổi từ meter dang feet</h2>
+<label for="meter">Nhập meter</label>
+<input type="number" id="meter">
+<button onclick="chuyendoi()">Chuyển đổi</button>
+<p id = ketqua></p>
+
+<script>
+    function chuyendoi() {
+        let a = document.getElementById("meter").value;
+        let  b = parseFloat(a);
+
+        if (!isNaN(b) && b >= 0) {
+            let ft = b * 3.2808;
+            document.getElementById("ketqua").innerText = b + " Meter" + " = " + ft + " Feet";
+        } else {
+            document.getElementById("ketqua").innerText =
+                "Vui lòng nhập số hợp lệ (≥ 0).";
+        }
+
+    }
+</script>
+</body>
+</html>

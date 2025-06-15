@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+<!--<h2>dùng if để giải</h2>-->
+
+<script>
+    let kWh = parseFloat(prompt("Nhập số KWh"));
+
+    function tinhTienDien(kWh) {
+
+        if (isNaN(kWh) || kWh < 0) {
+            document.write("Vui lòng nhập số KWh hợp lệ.");
+            return;
+        }
+        let tien = 0;
+        if (kWh <= 50) {
+            tien = kWh * 1500;
+        } else if (kWh <= 100) {
+            tien = 50 * 1500 + (kWh - 50) * 1800;
+        } else if (kWh <= 200) {
+            tien = 50 * 1500 + 50 * 1800 + (kWh - 100) * 2100;
+        } else {
+            tien = 50 * 1500 + 50 * 1800 + 100 * 2100 + (kWh - 200) * 2500;
+        }
+
+        return tien;
+    }
+
+    let tien = tinhTienDien(kWh);
+    document.write("Tiền là: " + tien.toLocaleString() + " VND");
+</script>
+
+
+</body>
+</html>

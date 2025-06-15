@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+<label>Thu nhập chịu thuế (triệu đồng): <input id="thuNhap" type="number" min="0"></label>
+<button onclick="tinhThue()">Tính thuế</button>
+<p id="ketqua"></p>
+
+<script>
+    function tinhThue() {
+        let tn = parseFloat(document.getElementById("thuNhap").value);
+        if (isNaN(tn) || tn < 0) {
+            document.getElementById("ketqua").innerText = "Nhập thu nhập hợp lệ!";
+            return;
+        }
+        let thue = 0;
+        if (tn <= 5) {
+            thue = tn * 0.05;
+        } else if (tn <= 10) {
+            thue = tn * 0.10;
+        } else if (tn <= 18) {
+            thue = tn * 0.15;
+        } else if (tn <= 32) {
+            thue = tn * 0.20;
+        } else if (tn <= 52) {
+            thue = tn * 0.25;
+        } else if (tn <= 80) {
+            thue = tn * 0.30;
+        } else {
+            thue = tn * 0.35;
+        }
+        document.getElementById("ketqua").innerText = "Tiền thuế phải nộp:" + thue + "triệu đồng";
+    }
+</script>
+</body>
+</html>

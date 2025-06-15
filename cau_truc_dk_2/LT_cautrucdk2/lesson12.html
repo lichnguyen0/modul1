@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tính lãi ngân hàng</h3>
+
+<label>Số tiền ban đầu (VND): <input type="number" id="tien" min="0"></label><br><br>
+<label>Số tháng: <input type="number" id="thang" min="1"></label><br><br>
+<label>Lãi suất hàng tháng (%): <input type="number" id="lai" min="0"></label><br><br>
+
+<button onclick="tinhLai()">Tính</button>
+<p id="ketqua"></p>
+
+<script>
+    function tinhLai() {
+        let tien = parseFloat(document.getElementById("tien").value);
+        let thang = parseInt(document.getElementById("thang").value);
+        let lai = parseFloat(document.getElementById("lai").value);
+
+        if (isNaN(tien) || isNaN(thang) || isNaN(lai) || tien < 0 || thang < 1 || lai < 0) {
+            document.getElementById("ketqua").innerText = "Vui lòng nhập đầy đủ và hợp lệ!";
+            return;
+        }
+
+        let r = lai / 100;
+        let tong = tien * Math.pow(1 + r, thang);
+
+        document.getElementById("ketqua").innerText =
+            "Tổng số tiền sau "+ thang+ " tháng: "+ tong+ " VND";
+    }
+</script>
+</body>
+</html>

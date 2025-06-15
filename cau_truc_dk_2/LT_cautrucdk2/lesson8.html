@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</title>
+</head>
+<body>
+<h2>Kiểm tra tuổi hợp lệ</h2>
+
+<label for="age">Nhập tuổi: </label>
+<input type="number" id="age"><br><br>
+
+<button onclick="kiemTraTuoi()">Kiểm tra</button>
+
+<p id="ketqua"></p>
+
+<script>
+    function kiemTraTuoi() {
+        let tuoi = parseInt(document.getElementById("age").value);
+        let kiemtra = document.getElementById("ketqua");
+        if (isNaN(tuoi)) {
+            ketquaEl.innerText = "Vui lòng nhập một số nguyên hợp lệ.";
+            return;
+        }
+        if (tuoi > 0 && tuoi < 120) {
+            kiemtra.innerText = "Tuổi " + tuoi + " hợp lệ là tuổi của một người";
+        } else {
+            kiemtra.innerText = "Tuổi "+ tuoi+ " không hợp lệ để là tuổi của một người";
+        }
+
+    }
+</script>
+</body>
+</html>

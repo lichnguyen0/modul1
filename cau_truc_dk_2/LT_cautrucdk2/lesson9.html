@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</title>
+</head>
+<body>
+<h2>Kiểm tra 3 số có phải là cạnh tam giác không</h2>
+
+<label for="a">Nhập a: </label>
+<input type="number" id="a"><br><br>
+
+<label for="b">Nhập b: </label>
+<input type="number" id="b"><br><br>
+
+<label for="c">Nhập c: </label>
+<input type="number" id="c"><br><br>
+
+<button onclick="kiemTraTamGiac()">Kiểm tra</button>
+
+<p id="ketqua"></p>
+
+<script>
+    function kiemTraTamGiac() {
+        const a = parseFloat(document.getElementById("a").value);
+        const b = parseFloat(document.getElementById("b").value);
+        const c = parseFloat(document.getElementById("c").value);
+        const ketquaAll = document.getElementById("ketqua");
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            ketquaEl.innerText = "Vui lòng nhập đủ 3 số thực hợp lệ.";
+            return;
+        }
+
+        if (a > 0 && b > 0 && c > 0 &&
+            a + b > c &&
+            b + c > a &&
+            a + c > b) {
+            ketquaAll.innerText = "Ba số này là cạnh của một tam giác.";
+        } else {
+            ketquaAll.innerText = "Ba số này không phải là cạnh của một tam giác.";
+        }
+    }
+</script>
+</body>
+</html>

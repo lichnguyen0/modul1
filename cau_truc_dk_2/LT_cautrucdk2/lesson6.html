@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1.</title>
+</head>
+<body>
+<h3>Giải phương trình bậc 1</h3>
+
+<label for="a">Nhập a: </label>
+<input type="number" id="a"><br><br>
+
+<label for="b">Nhập b: </label>
+<input type="number" id="b"><br><br>
+
+<button onclick="giaiPhuongTrinh()">Giải</button>
+
+<p id="ketqua"></p>
+
+<script>
+    function giaiPhuongTrinh() {
+        const a = parseFloat(document.getElementById("a").value);
+        const b = parseFloat(document.getElementById("b").value);
+        let ketqua = "";
+
+        if (a === 0) {
+            if (b === 0) {
+                ketqua = "Phương trình có vô số nghiệm.";
+            } else {
+                ketqua = "Phương trình vô nghiệm.";
+            }
+        } else {
+            const x = -b / a;
+            ketqua = "Nghiệm của phương trình là x = " + x;
+        }
+
+        document.getElementById("ketqua").innerText = ketqua;
+    }
+</script>
+</body>
+</html>
