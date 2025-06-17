@@ -9,9 +9,31 @@
 <button onclick="batDau()">Start</button>
 <script>
     function batDau() {
-        let num = +prompt("Nhập số bạn muốn đoán");
+
+        let start = +prompt("Nhập số bắt đầu:");
+        let end = +prompt("Nhập số kết thúc");
+        if (isNaN(start)|| isNaN(end) || start>= end){
+    alert("Vui lòng nhập khoảng hợp lệ")
+            return;
+        }
+        let random = Math.floor(Math.random() * (end - start + 1)) + start;
+        for (let i = 1; i <= 3; i++) {
+            let num = +prompt(`Lần ${i}: Nhập số bạn muốn đoán từ ${start} đến ${end}`);
+
+            if (num == random) {
+                alert(" Chúc mừng bạn đoán đúng");
+                return;
+            }
+            if (num < random) {
+                alert(" Số của bạn nhỏ hơn");
+            } else {
+                alert(" Số của bạn lớn hơn");
+            }
+        }
+        alert("Hết lượt số đúng là"+ random)
 
     }
+
 </script>
 </body>
 </html>
