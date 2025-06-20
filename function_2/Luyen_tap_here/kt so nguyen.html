@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập vào và kiểm tra số chó có phải là chẵn</title>
+</head>
+<body>
+<script>
+function kiemTra (){
+    let number = parseInt(prompt("Nhập số để kiểm tra")) // b1: tạo prompt vào trong hàm để đúng quy cách
+         if (number%2===0){
+             alert(number+" là số chẵn")
+             return true;  // Dùng return nếu muốn dùng kết quả kiểm tra cho bước tiếp theo.
+         }else {
+             alert( number+ "không phải là số chẵn")
+             return false; // Dùng return nếu muốn dùng kết quả kiểm tra cho bước tiếp theo.
+         }
+}
+kiemTra()
+
+
+// cách làm 2 khoa học hơn dễ áp dụng:
+
+//Tạo một hàm
+function kiemTra2 (n){
+     return number%2===0;
+}
+
+// Sử dụng:
+let number =parseInt(prompt("Nhập số để kiểm tra"));
+if(kiemtra(number)){
+    alert(number+ " là số chẵn");
+}else {
+    alert(number+ " là số lẻ")
+}
+
+
+
+
+</script>
+</body>
+</html>

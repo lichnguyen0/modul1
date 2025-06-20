@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1. khai báo biến và hằng</title>
+</head>
+<body>
+<script>
+    // let name  = "Lich";
+    // let age = 25;
+    // const PI = 3.14;
+    // console.log(name);
+    // console.log(age);
+    // console.log(PI);
+    //
+    // age += 1;
+    // console.log(age);
+    // console.log("kiểu dữ liệu là :"+ typeof name);
+    // console.log("kiểu dữ liệu là :"+ typeof age);
+
+
+    let x = 10;
+    let y = 3;
+
+    let tong = x + y;
+    let hieu = x - y;
+    let tich = x * y;
+    let thuong = x / y;
+    let chiadu = x % y;
+
+    let lamtron = Math.round(x / y);
+
+    console.log("tổng của x +y = " + tong);
+    console.log("Hiệu của x-y = " + hieu);
+    console.log("tich của x *y = " + tich);
+    console.log("thương của x +y = " + lamtron);
+    console.log("chia du của x +y = " + chiadu);
+
+
+    x++;
+    y--;
+    console.log("KQ sau  khi tăng x :" + x)
+    console.log("KQ sau  khi giảm y :" + y)
+
+    x += 5;
+    console.log("sau khi gán +=5 cho x kết quả là " + x)
+    x -= 5;
+    console.log("sau khi gán -=5 cho x kết quả là " + x)
+    x *= 5;
+    console.log("sau khi gán *=5 cho x kết quả là " + x)
+    x /= 5;
+    console.log("sau khi gán /=5 cho x kết quả là " + x)
+    x %= 5;
+    console.log("sau khi gán %=5 cho x kết quả là " + x)
+
+    let is24HourTimeFormat = true;
+    let  isDarkModeEnable = false;
+
+    console.log(is24HourTimeFormat && isDarkModeEnable);
+    console.log(isDarkModeEnable|| is24HourTimeFormat);
+    console.log(!isDarkModeEnable || !is24HourTimeFormat);
+
+
+</script>
+</body>
+</html>

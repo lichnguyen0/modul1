@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<hi>Product managerment</hi>
+<h2>Add New Product</h2>
+
+<form action="#">
+  <input type="text"name="name" placeholder="New Product">
+<button type="submit">Add</button>
+</form>
+<h2>Display All Product</h2>
+<table>
+  <theard>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </theard>
+</table>
+
+<script>
+  const products = ['Samsung', 'Aplle', 'Opple'];
+  function displayProducts() {
+    //hien thi so san pham
+    document.getElementById('conunProducts').innerHTML = '';
+    const body = document.getElementById('listProducts');
+  for (let i =0; i < products.length; i++) {
+    body.innerHTML += '<tr><td>' +
+  }
+  }
+</script>
+</body>
+</html>
