@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<label for="inputFahrenheit"></label>
+<input type="number" id="inputFahrenheit" placeholder="Fahrenheit"
+       oninput="temperatureConverter(this.value)"
+       onchange="temperatureConverter(this.value)">
+<p>Celsius: <span id ="outputCelsius"></span></p>
+<!--//oninput="temperatureConverter(this.value)"  → Gọi hàm mỗi khi người dùng đang gõ.-->
+<!--onchange="temperatureConverter(this.value)" → Gọi hàm khi người dùng nhập xong và rời khỏi ô input.-->
+<!--this.value: giá trị người dùng vừa nhập (số Fahrenheit).-->
+<script>
+    function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);  //Chuyển giá trị nhập (kiểu chuỗi) sang số thực để tính toán
+        document.getElementById("outputCelsius").innerHTML = (valNum - 32) / 1.8;
+    }
+</script>
+</body>
+</html>
