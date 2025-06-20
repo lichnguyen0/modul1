@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+  let number  = +prompt("Nhập số để kiểm tra");
+  isPrime (number);
+  function isPrime(number) {
+    let count = 0; // đếm số ước đang kiểm tra
+    let isPrime = false;
+    if(number==0){
+      alert(number + " Không phải số nguyên tố")
+    }else{
+      for (let i =1; i<= number; i++) {
+        if(number % i ==0){
+          count+=1;
+        }
+      }if (count == 2) {
+        isPrime = true;
+      }
+      if (isPrime) {
+        alert(number + " Là số nguyên tố")
+      }else{
+        alert (number + " Không phải số nguyên tố")
+      }
+    }
+  }
+</script>
+</body>
+</html>
