@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chhương trình tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+  // Nhập thông tin từ người dùng
+  let soTien = parseFloat(prompt("Nhập số tiền vay (VNĐ):"));
+  let laiSuatVay = parseFloat(prompt("Nhập lãi suất vay (%/năm):"));
+  let kyHan = parseInt(prompt("Nhập kỳ hạn vay (số tháng):"));
+
+  // Tính lãi suất theo tháng
+  let laiThang = (laiSuatVay / 100) / 12;
+
+  // Lưu số tiền gốc ban đầu
+  let tienGoc = soTien;
+
+  // Lặp qua từng tháng để tính lãi kép
+  for (let i = 1; i <= kyHan; i++) {
+    soTien = soTien + soTien * laiThang;
+  }
+
+  // Tính tổng lãi
+  let tienLai = soTien - tienGoc;
+
+  // In kết quả
+  document.write("<h3>KẾT QUẢ TÍNH</h3>");
+  document.write(" Số tiền vay ban đầu: " + tienGoc.toLocaleString() + " VNĐ<br>");
+  document.write(" Lãi suất: " + laiSuatVay + "%/năm<br>");
+  document.write(" Kỳ hạn vay: " + kyHan + " tháng<br><br>");
+
+  document.write(" Số tiền lãi phải trả: " + tienLai.toFixed(2).toLocaleString() + " VNĐ<br>");
+  document.write(" Tổng số tiền phải trả: " + soTien.toFixed(2).toLocaleString() + " VNĐ");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</title>
+</head>
+<body>
+<script>
+    //Đoan tam giác 1:
+    let n = 5;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+    // Đoạn tam giác 2:
+    for (let i = n; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    /* Giải Thích:
+    - Đoạn 1:
+     //for (let i = 1; i <= 5; i++)
+       Đây là vòng lặp dùng để điều khiển số dòng.
+    Biến i đại diện cho số dòng hiện tại.
+    i sẽ bắt đầu từ 1 và tăng dần đến 5.
+    Mỗi lần lặp của i tương ứng với việc in ra một dòng sao *.
+
+    //for (let j = 1; j <= i; j++)
+        Đây là vòng lặp dùng để in dấu * trên từng dòng.
+    Biến j đại diện cho số thứ tự của dấu * trong dòng hiện tại.
+    Điểm đặc biệt: j chạy từ 1 đến bằng với giá trị của i
+
+    Điều này có nghĩa là:
+    Dòng 1 (i = 1) → j chạy từ 1 đến 1 → in 1 dấu *
+    Dòng 2 (i = 2) → j chạy từ 1 đến 2 → in 2 dấu *
+    Dòng 3 (i = 3) → j chạy từ 1 đến 3 → in 3 dấu *
+    ...
+    Dòng 5 (i = 5) → in 5 dấu *
+    bởi vì vòng lặp bên trong luôn chạy hết số lần.
+
+    - Đoạn 2:
+    for (let i = n; i >= 1; i--)
+    Dùng để điều khiển số dòng.
+    Bắt đầu từ i = n → chạy đến i = 1.
+    Giảm i mỗi lần (i--), nên sẽ lặp từ lớn đến bé.
+    Tức là sẽ có n dòng được in ra.
+    for (let j = 1; j <= i; j++)
+    Dùng để điều khiển số dấu * trên mỗi dòng.
+    Với mỗi giá trị của i, vòng lặp này sẽ in từ 1 đến i dấu *.
+    Giá trị của i giảm dần, nên mỗi dòng sau sẽ có ít dấu * hơn dòng trước.
+    ____
+    Giả sử n = 5, chạy thế nào?
+    i = 3:
+    → j = 1, 2, 3 → in ***
+    → xuống dòng
+
+    i = 2:
+    → j = 1, 2 → in **
+    → xuống dòng
+
+    i = 1:
+    → j = 1 → in *
+    → xuống dòng
+     */
+
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n - i; j++) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let k = 1; k <= i; k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+
+    for (let i = n; i >= 1; i--) {
+        for (let j = 1; j <= n - i; j++) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let k = 1; k <= i; k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+
+</script>
+</body>
+</html>
