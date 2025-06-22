@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự số</title>
+</head>
+<body>
+<script>
+
+    function laKyTuSo(char) {
+        return !isNaN(parseInt(char)) && char.trim().length === 1;
+    }
+    let kyTu = prompt("Nhập một ký tự:");
+
+    kyTu = kyTu.charAt(0);
+
+    if (laKyTuSo(kyTu)) {
+        document.write("'" + kyTu + "' là ký tự số.");
+    } else {
+        document.write("'" + kyTu + "' không phải là ký tự số.");
+    }
+</script>
+</body>
+</html>

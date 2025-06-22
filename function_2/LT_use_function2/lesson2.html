@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích chu vi hình tròn</title>
+</head>
+<body>
+<script>
+
+  //tạo hàm
+  function  dienTichtr(r){
+    return Math.PI * r * r;
+  }
+
+  function chuViTron(r){
+    return 2 * Math.PI * r;
+  }
+
+  // sử dụng:
+  let r = parseFloat(prompt("Nhập bán kính hình tròn"));
+  let dienTich = dienTichtr(r);
+  let chuVi = chuViTron(r);
+
+
+  document.write("Bán kính : "+ r + "<br>" );
+  document.write("Diện tích hình tròn : "+ dienTich.toFixed(2)+ "<br>");
+  document.write("Chu vi hình tròn: " + chuVi.toFixed(2));
+</script>
+</body>
+</html>

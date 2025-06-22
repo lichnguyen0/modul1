@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+  // tạo:
+  function soNguyenDuong(n){
+    if (n>0 && n%1===0){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  let so =  parseFloat(prompt("Nhập một số:"));
+
+  if (soNguyenDuong(so)) {
+    document.write(so + " là số nguyên dương.");
+  } else {
+    document.write(so + " không phải là số nguyên dương.");
+  }
+</script>
+</body>
+</html>

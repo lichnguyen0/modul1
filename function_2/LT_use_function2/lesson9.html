@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự trong mảng</title>
+</head>
+<body>
+<script>
+  function demKyTu(mang, kyTu) {
+    let dem = 0;
+    for (let i = 0; i < mang.length; i++) {
+      if (mang[i] === kyTu) {
+        dem++;
+      }
+    }
+
+    if (dem === 0) {
+      return -1;
+    } else {
+      return dem;
+    }
+  }
+
+  let mangKyTu = ['a', 'b', 'c', 'a', 'd', 'a'];
+
+  let kyTuCanTim = prompt("Nhập ký tự cần kiểm tra:");
+
+  let ketQua = demKyTu(mangKyTu, kyTuCanTim);
+
+  if (ketQua === -1) {
+    document.write("Ký tự '" + kyTuCanTim + "' không có trong mảng.");
+  } else {
+    document.write("Ký tự '" + kyTuCanTim + "' xuất hiện " + ketQua + " lần trong mảng.");
+  }
+</script>
+</body>
+</html>

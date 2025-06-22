@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<script>
+    function timSoNhoNhat(a, b, c) {
+        let min = a;
+
+        if (b < min) {
+            min = b;
+        }
+        if (c < min) {
+            min = c;
+        }
+        return min;
+    }
+
+    //sử dụng:
+
+    let so1 = parseInt(prompt("Nhập số thứ nhất:"));
+    let so2 = parseInt(prompt("Nhập số thứ hai:"));
+    let so3 = parseInt(prompt("Nhập số thứ ba:"));
+
+    // Gọi hàm
+    let ketQua = timSoNhoNhat(so1, so2, so3);
+
+    // Hiển thị kết quả
+    document.write("Số nhỏ nhất là: " + ketQua);
+</script>
+</body>
+</html>

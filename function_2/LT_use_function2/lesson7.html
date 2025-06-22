@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ hai số nguyên</title>
+</head>
+<body>
+<script>
+  function doiCho(arr) {
+    let temp = arr[0];
+    arr[0] = arr[1];
+    arr[1] = temp;
+  }
+
+  let a = parseInt(prompt("Nhập số thứ nhất:"));
+  let b = parseInt(prompt("Nhập số thứ hai:"));
+
+  let so = [a, b];
+
+  document.write("Trước khi đổi chỗ: a = " + so[0] + ", b = " + so[1] + "<br>");
+
+  // Gọi hàm đổi chỗ
+  doiCho(so);
+
+  document.write("Sau khi đổi chỗ: a = " + so[0] + ", b = " + so[1]);
+</script>
+</body>
+</html>
