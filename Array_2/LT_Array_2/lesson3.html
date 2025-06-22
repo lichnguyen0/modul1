@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khai báo một mảng ký tự và kích thước của mảng.</title>
+</head>
+<body>
+<script>
+    let arr = [1, 3, 4, "ds", 'f', "*", "d", 77, 9,10];
+    let dem=0;
+    for (let i = 0; i<arr.length; i++) {
+        let str = arr[i].toString();
+        if (str.length === 1 && str >= '0' && str <= '9') {
+            dem++;
+        }
+
+    } document.write("Số ký tự là chữ số (0-9) trong mảng là: " + dem);
+
+</script>
+</body>
+</html>
