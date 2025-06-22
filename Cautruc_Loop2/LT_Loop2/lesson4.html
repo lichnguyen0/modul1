@@ -7,23 +7,23 @@
 <body>
 <script>
 
-  let length = 50;
-  let height = 10;
-  // debugger;
-  for (let i = 1; i < height; i++) {
-    for (let j = 1; j < length; j++) {
-      if (i === 1 || i === height - 1) {
-        document.write("*");
-      } else {
-        if (j === 1 || j === length - 1) {
-          document.write("*");
-        } else {
-          document.write("&nbsp;&nbsp;");
+    let length = 50;
+    let height = 10;
+    // debugger;
+    for (let i = 1; i < height; i++) {
+        for (let j = 1; j < length; j++) {
+            if (i === 1 || i === height - 1) {
+                document.write("*");
+            } else {
+                if (j === 1 || j === length - 1) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
         }
-      }
+        document.write("<br>");
     }
-    document.write("<br>");
-  }
 </script>
 
 

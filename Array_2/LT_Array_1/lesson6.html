@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo hoặc nhập vào một mảng số nguyên gồm 10 phần tử.
+ Nhập hoặc tạo một phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng không.
+Nếu V thuộc mảng, in ra: "V is in the array".
+Nếu không, in ra: "V is not in the array".-->
+
+<script>
+    let arr = [1, 4, 66, 33, 88, 2, 66, 33, 5, 7];
+    let V = parseInt(prompt("Nhập số nguyên V"));
+
+    if(isNaN(V)) {
+        alert(" Bạn phải nhập một số nguyên hợp lệ")
+    }
+    if (arr.includes(V)) {
+        document.write(V + " is in the array");
+    } else {
+        document.write(V + " is not in the array");
+    }
+
+
+</script>
+</body>
+</html>

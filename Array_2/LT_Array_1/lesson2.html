@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo một mảng số nguyên</title>
+</head>
+<body>
+<script>
+    // Viết chương trình khởi tạo một mảng số nguyên gồm 10 phần tử khác nhau.
+    // Chương trình hiển thị phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+
+    let num = [1, 30, 3, 4, 55, 6, 71, 8, 9, 88];
+    let max = num[0];
+    let index = 0;                              //Lưu chỉ số (vị trí trong mảng) của phần tử lớn nhất hiện tại (bắt đầu là vị trí 0).
+    for (let i = 1; i < num.length; i++) {      //Vòng lặp for dùng để duyệt qua các phần tử còn lại trong mảng (bắt đầu từ i = 1, vì đã kiểm tra phần tử arr[0] rồi).
+        if (num[i] > max) {                     // Kiểm tra xem phần tử hiện tại có lớn hơn max không.
+            max = num[i];                        //Nếu đúng, cập nhật max bằng phần tử lớn hơn đó.
+            index = i;                          // Đồng thời cập nhật chỉ số của phần tử lớn nhất hiện tại.
+        }
+    }
+    document.write("Giá trị lớn nhất trong mảng là: " + max + "<br>");
+    document.write("Vị trí của phần tử lớn nhất là: " + index);
+
+</script>
+</body>
+</html>

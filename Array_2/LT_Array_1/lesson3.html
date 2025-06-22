@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết chương trình khởi tạo một mảng số nguyên.
+    // Hiển thị giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+
+    let num = [12, 34, 75, 22, 88, 45, 886, 3]
+    let max = 0;
+    for (let i = 1; i < num.length; i++) {
+        if (num[i] > max) {
+            max = num[i];
+        }
+    }
+    document.write("Giá trị lớn nhất là " + max+ "<br>")
+
+    let tong = 0;
+    for (let i = 1; i < num.length; i++) {
+        tong += num[i];
+    }
+    let tinhTB = tong / num.length;
+    document.write("Giá trị trung bình của mảng: " + tinhTB.toFixed(2));
+</script>
+</body>
+</html>

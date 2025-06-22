@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo hoặc nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng.-->
+<script>
+  let array = [];    //khởi tạo mảng rỗng
+  let input;         // tạo một biến input để lưu giá trị tạm thời người dùng nhập từ prompt()
+  while (true) {       // cho vòng lặp vô hạn cho đến khi người dùng bấm cancel
+      input = prompt("Nhap vao de them nhieu mang (bấm cancel để dừng)");   //  Hiển thị hộp thoại cho người dùng nhập giá trị.
+                                                                        // Nếu người dùng bấm Cancel, thì input === null
+      if(input===null) break;     //Nếu người dùng bấm Cancel, thì thoát khỏi vòng lặp (break)
+      let num = parseInt(input);  // Dùng parseInt() để chuyển đổi chuỗi người dùng nhập thành số nguyên.
+      array.push(num);    // thêm vào mảng bằng array.push(num).
+  }console.log(array.reverse());
+
+</script>
+</body>
+</html>

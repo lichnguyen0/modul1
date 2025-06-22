@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo hoặc nhập vào hai mảng số nguyên gồm 10 phần tử (gọi là mảng a và b).
+Tạo mảng c gồm 20 phần tử. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c.
+Hiển thị mảng c.-->
+
+<script>
+  let a = [1,22,5,7,4,3,6,8,95,5];
+  let b= [5,65,78,99,22,55,34,67,90,34];
+
+  let c = b.concat(a);
+
+  document.write("Mảng c gồm 20 phần tử là: " + c.join(", "));
+</script>
+</body>
+</html>

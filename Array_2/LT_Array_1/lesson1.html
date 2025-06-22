@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Khởi tạo mảng số nguyên 10 phần tử, chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10</title>
+    <title>Khởi tạo mảng số nguyên 10 phần tử, chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn
+        hơn hoặc bằng 10</title>
 </head>
 <body>
-
+<script>
+    let dem=0; // khai bao bie dem de vua dem vua luu
+    let num = [1, 2, 3, 20, 7, 5, 8, 15, 3, 4]; // tao mang co 10 phan tu
+    for (let i = 0; i < num.length; i++){   // for de duyet qua tung phan tu
+        if(num[i]>=10){   //kiem tra dieu kien >=10
+            dem++; // nếu số nguyên nào >=10 thì đếm tăng
+        }
+    }
+    console.log(dem);
+</script>
 </body>
 </html>

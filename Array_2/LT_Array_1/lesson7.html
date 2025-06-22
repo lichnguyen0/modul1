@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo hoặc nhập vào một mảng số nguyên gồm 10 phần tử.
+Nhập hoặc tạo một phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không.
+Nếu V thuộc mảng, xóa V khỏi mảng (dịch các phần tử bên phải V sang vị trí của V và gán 0 cho phần tử cuối cùng của mảng).-->
+
+<script>
+  let arr = [1, 4, 66, 33, 88, 2, 66, 33, 5, 7];
+  let V = parseInt(prompt("Nhập số nguyên V:"));
+  let index = arr.indexOf(V);
+  if (index !== -1) {
+    for (let i = index; i < arr.length - 1; i++) {
+      arr[i] = arr[i + 1];
+    }
+    arr[arr.length - 1] = 0;
+    document.write("Đã xóa " + V + " khỏi mảng.<br>");
+  } else {
+    document.write(V + " không có trong mảng.<br>");
+  }
+  document.write("Mảng sau khi xử lý: " + arr.join(", "));
+</script>
+
+</body>
+</html>
