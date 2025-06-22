@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+  <h2> Type anthing slowly</h2>
+  <form name="f">
+    <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+  </form>
+</center>
+<script>
+  let a= new Array(), n="";
+  a[1]='T'; a[2]='ô';a[3]='i';a[4]=' ';a[5]='L';a[6]='à';a[7]=' ';a[8]='M';a[9]='ộ';a[10]='t';a[11]=' ';a[12]='Đ';a[13]='ứ';a[14]='a';a[15]=' ';a[16]='N';a[17]='g';a[18]='ố';a[19]='c';a[20]='!';a[21]='!';
+  function typeTextarea(){
+    t= document.f.txt.value;
+    j= t.length;
+    if(j>0)
+    {
+      for(let i=1; i<=j; i++)
+      {
+        n = n + a[i];
+        if (i == 21) {
+          document.f.txt.value = "";
+          n = "";
+        }
+      }
+    }
+    document.f.txt.value= n;
+    n="";
+    setTimeout("typeTextarea()",1);
+    //return flase;
+  }
+</script>
+</body>
+</html>
