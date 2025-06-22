@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Từ điển Anh - Việt</h2>
+
+<label>Nhập từ tiếng Anh:</label><br>
+<input type="text" id="tuNhap">
+<button onclick="timTu()">Tìm nghĩa</button>
+
+<div id="ketqua"></div>
+
+
+<script>
+  let tuTA = ["hello", "book", "pen", "cat", "dog"];
+  let tuTV = ["xin chào", "sách", "bút", "mèo", "chó"];
+
+  function timTu() {
+    let nhap = document.getElementById("tuNhap").value.trim().toLowerCase();
+    let viTri = tuTA.indexOf(nhap); // Tìm vị trí trong mảng tiếng Anh
+
+    let ketqua = document.getElementById("ketqua");
+
+    if (viTri !== -1) {
+      ketqua.innerText = "Nghĩa tiếng Việt: " + tuTV[viTri];
+      ketqua.style.color = "green";
+    } else {
+      ketqua.innerText = "Không tìm thấy.";
+      ketqua.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>
