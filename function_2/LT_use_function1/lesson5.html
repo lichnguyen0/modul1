@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>TIM NGOI SAO</h3>
+<label><input id="sao"></label>
+<button onclick="tim()"> tim sao</button>
+<p id="ketqua"></p>
+<script>
+    function tim(){
+        let sao = document.getElementById("sao").value;
+        tensao(sao)
+    }
+
+    function tensao(sao){
+        let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let chomsao = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let idx = -1;
+        for (let i = 0 ; i<star.length; i++){
+            if (sao === star[i]){
+                idx = i
+                break;
+            }
+        }
+        if (idx === -1){
+            document.getElementById('ketqua').innerHTML= " khong tim thay chom sao tuong ung";
+        }else {
+            let message = sao + " thuoc chom sao " + chomsao[idx]
+            document.getElementById('ketqua').innerHTML= message
+        }
+    }
+</script>
+</body>
+</html>
