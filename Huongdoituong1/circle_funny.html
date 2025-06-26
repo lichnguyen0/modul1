@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Funny circles</title>
+</head>
+<body>
+<!--tao mot trang html voi thẻ canvas-->
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+  //ve hinh tron don gian voi kich thuoc co dinh
+  function Circle(x, y, radius) {
+    this.x = y;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function createCriles() {
+    let ctx = document.getElementById('myCanvas').getContext('2d');
+    let criles = new Criles(500, 500, 80);
+    ctx.beginPath();
+    ctx.arc(cirles.x, cirles.y, circle.radius, 0, 2 * Math.PI, false);
+    ctx.fill();
+  }
+
+  // ve hinh tron ban kinh ngau nhien
+  createCircle();
+
+  function Circle(x, y, radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function createCircle() {
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    var radius = Math.floor(Math.random() * 80);
+    var circle = new Circle(500, 500, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fill();
+  }
+
+  createCircle();
+
+  // ve hinh tron mau ngau nhien
+  function Circle(x, y, radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function getRandomHex() {
+    return Math.floor(Math.random() * 255);
+  }
+
+  function getRandomColor() {
+    var red = getRandomHex();
+    var green = getRandomHex();
+    var blue = getRandomHex();
+    return "rgb(" + red + "," + blue + "," + green + ")";
+  }
+
+  function createCircle() {
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    var radius = Math.floor(Math.random() * 80);
+    var color = getRandomColor();
+    var circle = new Circle(500, 500, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  createCircle();
+
+  //ve duoc hinh tron o vi tri ngau nhien
+  function Circle(x, y, radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function getRandomHex() {
+    return Math.floor(Math.random() * 255);
+  }
+
+  function getRandomColor() {
+    var red = getRandomHex();
+    var green = getRandomHex();
+    var blue = getRandomHex();
+    return "rgb(" + red + "," + blue + "," + green + ")";
+  }
+
+  function createCircle() {
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    var radius = Math.floor(Math.random() * 80);
+    var color = getRandomColor();
+    var x = Math.random() * window.innerWidth;
+    var y = Math.random() * window.innerHeight;
+    var circle = new Circle(x, y, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  createCircle();
+
+  // ve duoc 2 binh tron
+  function Circle(x, y, radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function getRandomHex() {
+    return Math.floor(Math.random() * 255);
+  }
+
+  function getRandomColor() {
+    var red = getRandomHex();
+    var green = getRandomHex();
+    var blue = getRandomHex();
+    return "rgb(" + red + "," + blue + "," + green + ")";
+  }
+
+  function createCircle() {
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    var radius = Math.floor(Math.random() * 80);
+    var color = getRandomColor();
+    var x = Math.random() * window.innerWidth;
+    var y = Math.random() * window.innerHeight;
+    var circle = new Circle(x, y, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  createCircle();
+  createCircle();
+
+  // Tao rat nhieu hinh tron
+  function Circle(x, y, radius) {
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function getRandomHex() {
+    return Math.floor(Math.random() * 255);
+  }
+
+  function getRandomColor() {
+    var red = getRandomHex();
+    var green = getRandomHex();
+    var blue = getRandomHex();
+    return "rgb(" + red + "," + blue + "," + green + ")";
+  }
+
+  function createCircle() {
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    var radius = Math.floor(Math.random() * 80);
+    var color = getRandomColor();
+    var x = Math.random() * window.innerWidth;
+    var y = Math.random() * window.innerHeight;
+    var circle = new Circle(x, y, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  createCircle();
+  createCircle();
+</script>
+</body>
+</html>
