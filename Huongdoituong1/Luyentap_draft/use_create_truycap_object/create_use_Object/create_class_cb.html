@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //mục tiêu tạo được đô tượng
+    // truy cập vào thành phần của lớp
+
+
+    //VD:
+    /*trong ví dụ này chúng ta khởi tạo lớp, đối tượng và hiển thị thông tin của đôi tượng*/
+    function Student(id, name, address) {  //b1: định nghĩa lớp student với các thuộc tính id,name,address
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.getInfor = function () { //phương thức getInfor trả về thông tin của đối tượng
+            return " Id= " + this.id + " Name =" + this.name + " Address =" + this.address;
+        }
+    }
+var student  = new Student(1, "Nguyen Van A", "Ha noi");  // sử dug câu lệnh var student = new Student để khởi tạo đối tượng truyền vào giá trị đối tượng id,name.addr
+ console.log(student.getInfor());   //thực thi phương thức get.Infor thông qua student
+
+
+  //  VD2:
+// trong ví dụ này sử dụng  object literal để khởi tạo đối tượng
+
+    let student1 = {    // định  nghĩa đối tượng student với các thuôc tính id,name, addr
+        id :2,
+        name: "Nguyen Van B",
+        address : "Da Nang",
+         getInfor: function () {  //định nghĩa .getInfor để trả về thông tin của đối tượng
+           return " Id= " + this.id + " Name =" + this.name + " Address =" + this.address;
+        }
+    }
+    console.log(student1);
+    console.log(student1.getInfor()); //gọi thuộc tính và phương thức thông qua đối tượng student
+</script>
+</body>
+</html>

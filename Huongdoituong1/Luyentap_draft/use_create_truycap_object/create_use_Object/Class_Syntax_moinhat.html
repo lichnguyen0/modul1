@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // Cách này sử dụng class Syntax
+    class Car { //  định nghĩa lớp Car với các thuộc tính name, color, classify thông qua constructor
+        constructor(name, color, classify) {
+            this.name = name;
+            this.color = color;
+            this.classify = classify;
+
+        }
+
+        inFor() {  //phương thức infor trả về thông tin của đối tượng (infor là người dùng tự định nghĩa)
+            return "name:" + this.name + " color:" + this.color + " classify:" + this.classify;
+        }
+    }
+
+    let car = new Car("BMW", "Blue", "crossover"); //sử dug câu lệnh let car = new Car để khởi tạo đối tượng truyền vào giá trị đối tượng name,color,classify.
+    console.log(car.inFor());
+
+</script>
+</body>
+</html>

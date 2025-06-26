@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*  Bài 3: Sử dụng constructor
+      Viết lớp Book có constructor với title, author
+
+      Viết phương thức getInfo() trả về "Sách: [title] - Tác giả: [author]"*/
+
+    class Book {
+        #title;
+        #author;
+
+        constructor(title, author) {
+            this.#title = title;
+            this.#author = author;
+        }
+
+        getInfo() {
+            return "Sách: " + this.#title + " Tác giả " + this.#author;
+        }
+    }
+
+    const  book = new Book("Kiếm tiền", "Ryder");
+    console.log(book.getInfo());
+</script>
+</body>
+</html>

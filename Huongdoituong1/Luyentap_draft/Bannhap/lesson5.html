@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//     Bài 1: Tạo lớp Person
+//     Thuộc tính: name, age
+//
+//     Phương thức: sayHello() → in "Xin chào, tôi là [name], [age] tuổi"
+//
+// 📌 Yêu cầu:
+//
+//         Tạo một đối tượng person1 và gọi sayHello().
+
+
+class Person {
+    #name;
+    #age;
+    constructor(name, age) {
+        this.#name = name;
+        this.#age = age;
+    }
+    sayHello(){
+        return "Xin chao, tôi tên là "+ this.#name+ "," + this.#age+ " tuổi";
+    }
+}
+let person = new Person("Lich",25);
+console.log(person.sayHello());
+</script>
+</body>
+</html>

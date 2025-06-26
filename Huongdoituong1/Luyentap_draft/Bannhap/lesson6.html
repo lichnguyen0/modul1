@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*Bài 2: Tạo lớp Dog
+    Thuộc tính: name, breed
+
+    Phương thức: bark() → in "Gâu gâu! Tôi là [name], giống [breed]"
+
+  📌 Yêu cầu:
+
+            Tạo 2 đối tượng và gọi bark()*/
+
+    class Dog {
+        #name;
+        #breed;
+        constructor(name,breed) {
+            this.#name = name;
+            this.#breed = breed;
+        }
+        bark(){
+            return " Gâu gâu! Tôi là :"+ this.#name + ", Giống "+ this.#breed;
+        }
+    }
+    let nick = new Dog("NickK", "Golden");
+    let jop =  new Dog("JopNap", "Chihuahua");
+
+    console.log(nick.bark());
+    console.log(jop.bark());
+</script>
+</body>
+</html>

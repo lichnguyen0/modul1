@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Cách này sử dụng Constructor Function
+
+    function Box(SL, color, size, address) {   // //b1: định nghĩa lớp box với các thuộc tính SL,color, size, address
+        this.SL = SL;
+        this.color = color;
+        this.size = size;
+        this.address = address;
+        this.infor = function () {   //phương thức infor trả về thông tin của đối tượng (infor là người dùng tự định nghĩa)
+            return " Số lượng:" + this.SL + " Màu sắc:" + this.color + " Size:" + this.size + " Địa chỉ:" + this.address;
+        }
+    }
+
+    let box = new Box(5, "Red", "10cm", "1m", "Ha noi"); //sử dug câu lệnh var box = new Student để khởi tạo đối tượng truyền vào giá trị đối tượng SL,color, size,addr.
+    console.log(box.infor());   //thực thi phương thức get.infor thông qua box
+    //cách truy xuất thuộc tính và phương thức:
+
+    /*chỉ có 2 cách:
+    1. sử dụng ký hiệu dấu chấm:*/
+    console.log(box.color);
+
+    // 2. sử dụng dấu ngoặc vuông:
+    console.log(box['size']);
+
+    //Thiết lập hoặc cập nhật thuộc tính và phương thức
+    //cách cập nhật giá trị thuộc tính :
+    box.color = "blue";  //cập nhật
+    console.log(box.color);
+
+    //Thêm thuộc tính hoặc phương thức mới
+    box.height = "1m22";    // đối tuợng box chưa định nghĩa height nhưng ta có thể thêm kiểu này,
+    console.log(box.height);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sử dụng super và phương thức</title>
+</head>
+<body>
+<script>
+    // Từ khoá super() có hai cách sử dụng chính khi làm việc với OPP:
+    //1. Dùng super() trong constructor: mục đích Gọi constructor của lớp cha để khởi tạo các thuộc tính kế thừa.
+    //2. Dùng super.methodName() để gọi phương thức lớp cha Mục đích: Gọi một phương thức cụ thể từ lớp cha — thường để mở rộng thay vì ghi đè hoàn toàn.
+
+
+    //Cách dùng 1: dùng super để kế thừa lớp cha.
+    class Dog {
+        constructor(type, furcolor, weight) {
+            this.type = type;
+            this.furcolor = furcolor;
+            this.weight = weight;
+        }
+
+        information() {
+            return "loại: " + this.type + " Màu lông: " + this.furcolor + " Cân nặng: " + this.weight;
+        }
+    }
+
+    let myDog = new Dog("Husky", "Black White", "30kg");
+
+    console.log(myDog.information());
+
+
+    class Cat extends Dog {
+        constructor(type, furcolor, weight, hair) {  //tât cả thuộc tính của lớp cha và con nhóm vào đây
+            super(type, furcolor, weight);  //thuộc tính nào của lớp cha muốn sử dụng sẽ được nhóm vào đây và super dùng để gọi constructor của lớp cha.
+            this.hair = hair;    //hair viết riêng bởi vì nó là thuộc tính mới của lớp con.
+        }
+
+        information() {
+            return "loại: " + this.type + " Màu lông: " + this.furcolor + " Cân nặng: " + this.weight + "Loại lông:" + this.hair;
+        }
+    }
+
+    let myCat = new Cat("short-haired cat", "Grey", "5Kg", "Short hair");
+    console.log(myCat.information());
+</script>
+</body>
+</html>

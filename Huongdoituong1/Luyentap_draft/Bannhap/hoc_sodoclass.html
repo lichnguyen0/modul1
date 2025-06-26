@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Animal {
+    #name;
+    #weight;
+    constructor(name, weight) {
+      this.#name = name;
+      this.#weight = weight;
+    }
+    //phuongthuc
+    getname(){
+      return this.#name;
+    }
+    setWeight(weight) {
+    }
+
+    info(){
+      return "Tên: "+ this.#name+ " Cân nặng: "+ this.#weight;
+    }
+  }
+  //xog doan 1:
+
+
+  //ke thua:
+  class Cat extends Animal {
+    #furColor
+    constructor(name, weight,furColor) {
+      super(name, weight);
+      this.#furColor = furColor;
+    }
+    getColor(){
+      return this.#furColor;
+    }
+
+    info(){
+      return super.info() + "Màu lông: "+ this.#furColor;
+    }
+  }
+
+  let  myCat = new Cat("meomeo", "11Kg", "blue");
+  console.log(myCat.info());
+
+</script>
+</body>
+</html>

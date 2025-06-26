@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính kế thừa</title>
+</head>
+<body>
+<script>
+    class Car {
+        constructor(name, color, type) {
+            this.name = name;
+            this.color = color;
+            this.type = type;
+        }
+
+        information() {   // khi trong đoạn code có tính kế thừa lớp cha và lớp con thì dòng này chính là tính đa hình
+            return "name: " + this.name + " color: " + this.color + " type: " + this.type;
+        }
+    }
+
+    let car = new Car("BMW", "Blue", "crossover");
+    console.log(car.information());  // thực thi information thông qua car
+    console.log(car.type);   // truy xuất thuộc tính và phương thức
+
+
+    class Motor extends Car {
+        constructor(name, color, style, classify) {   //tât cả thuộc tính của lớp cha và con nhóm vào đây
+            super(name, color);   // thuộc tính nào của lớp cha muốn sử dụng sẽ được nhóm vào đây và super dùng để gọi constructor của lớp cha.
+            this.style = style;  // style viết riêng bởi vì nó là thuộc tính mới của lớp con.
+        }
+
+        information() {  //phương thức information trả về thông tin của đối tượng (information là người dùng tự định nghĩa)
+                         // khi trong đoạn code có tính kế thừa lớp cha và lớp con thì dòng này chính là tính đa hình.
+
+            return "name: " + this.name + " color: " + this.color + " style: " + this.style;
+        }
+    }
+
+    let motor = new Motor("Ducati", "Red", "Two wheels");  //sử dug câu lệnh let motor = new Motor để khởi tạo đối tượng truyền vào giá trị đối tượng name,color,style.
+    console.log(motor.information());
+
+</script>
+</body>
+</html>

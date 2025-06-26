@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Vehicle {
+    #brand
+    #speed
+    constructor(brand, speed) {
+      this.#brand = brand;
+      this.#speed = speed;
+    }
+    getBrand() {
+      return this.#brand;
+    }
+    setSpeed(s) {
+      this.#speed = s;
+    }
+
+    info(){
+      return "Thương hiệu: " + this.#brand+ " tốc độ :"+ this.#speed;
+    }
+  }
+
+  // ke thua
+
+  class Car extends Vehicle {
+    #fuelType
+    constructor(brand, speed,fuelType) {
+      super(brand, speed);
+      this.#fuelType = fuelType;
+    }
+    getFuelType() {
+      return this.#fuelType;
+    }
+    info(){
+      return super.info()+ "Dùng Nhiên liệu:"+  this.#fuelType;
+    }
+  }
+  let myCar = new Car("BMW", 300, "gasoline");
+  console.log(myCar.info());
+</script>
+</body>
+</html>

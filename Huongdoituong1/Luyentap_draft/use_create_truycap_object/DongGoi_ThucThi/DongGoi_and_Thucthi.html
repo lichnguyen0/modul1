@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đóng gói và thực thi ứng dụng</title>
+</head>
+<body>
+<script>
+  /*class Dog {
+    constructor(type, furcolor, weight) {
+      this.type = type;
+      this.furcolor = furcolor;
+      this.weight = weight;
+    }
+
+    information() {
+      return "loại: " + this.type + " Màu lông: " + this.furcolor + " Cân nặng: " + this.weight;
+    }
+  }
+  let myDog = new Dog("Husky", "Blue", "23Kg")
+  console.log(myDog.information())*/
+
+  //Cách đóng gói nhu sau:
+  class Dog {
+
+    //thuộc tính Private
+
+    #type;
+    #furcolor;
+    #weight;
+
+    constructor(type, furcolor, weight) {
+      this.#type = type;
+      this.#furcolor = furcolor;
+      this.#weight = weight;
+    }
+
+    // phương thức public để xem thông tin
+    information() {
+        return "Loại :"+ this.#type + " Màu lông: "+ this.#furcolor+ "Cân năng:"+ this.#weight;
+    }
+      // 👇 Các phương thức getter riêng nếu cần
+      getType() {
+          return this.#type;
+      }
+
+
+  }
+  let myDog = new Dog("Husky","Blue", "23Kg");
+  console.log(myDog.information())
+
+</script>
+</body>
+</html>

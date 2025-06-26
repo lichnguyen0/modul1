@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Person{
+    #name
+    #age
+    constructor(name, age){
+      this.#name = name;
+      this.#age = age;
+    }
+    // phuong thuc
+    getName(){
+      return this.#name;
+    }
+
+    setAge(a){
+      this.#age = a;
+    }
+
+    info(){
+      return "Tên :"+this.#name+ ",Tuổi :" + this.#age;
+    }
+  }
+  let person = new Person("Lich", 25);
+  console.log(person.info())
+
+  //kế thừa
+
+  class Student extends Person {
+    #level
+    constructor(name, age, level){
+      super ( name,age );
+        this.#level = level;
+    }
+    getGrade(){
+      return this.#level;
+    }
+    info(){
+      return super.info() + ", lv  :" +  this.#level;
+    }
+  }
+
+  let student = new Student("Lich", 25, "8");
+  console.log(student.info())
+</script>
+</body>
+</html>

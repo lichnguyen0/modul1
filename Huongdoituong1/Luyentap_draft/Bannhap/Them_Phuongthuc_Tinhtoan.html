@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // tạo object tính chu vi và dien tich Hình chu nhat
+
+  class hinhChuNhat{
+    constructor(width, height) {
+      this.width = width;
+      this.height = height;
+    }
+    dienTich(){
+      return this.width * this.height;
+    }
+
+chuVi(){
+      return 2* (this.width + this.height);
+}
+  }
+
+  let chuNhat = new hinhChuNhat(4,5);
+  console.log("diện tích : "+ chuNhat.dienTich());
+  console.log("Chu vi: " + chuNhat.chuVi());
+
+</script>
+</body>
+</html>

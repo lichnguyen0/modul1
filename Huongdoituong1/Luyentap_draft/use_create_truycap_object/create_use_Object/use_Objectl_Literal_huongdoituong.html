@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //này sử dụng object literal để khởi tạo đối tượng.
+    // các bước:
+    //b1:
+    let box = {       // định nghĩa đối tượng box với các thuộc tính name, color, address, SL.
+        name: "Tăm",
+        color: "Blue",
+        address: "Ha noi",
+        SL: 3,
+        //b2:
+        inFor: function () {  //định nghĩa inFor để trả về thông tin của đối tượng (inFor này là do người dùng định nghĩa).
+            return "Box name: " + this.name + " Màu sắc: " + this.color + " Địa chỉ: " + this.address + " Số lượng: " + this.SL;
+        }
+    }
+    //b3:
+    console.log(box);
+    console.log(box.inFor());   //gọi thuộc tính và phương thức thông qua đối tượng student
+</script>
+</body>
+</html>
