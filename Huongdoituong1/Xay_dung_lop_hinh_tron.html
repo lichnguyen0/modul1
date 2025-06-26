@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xây dựng lớp Hình Tròn</title>
+</head>
+<body>
+<script>
+  // Tạo lớp Circle với phương thức khởi tao có một tham số chuyền vào
+  let Circle = function (radius) {
+    this.radius = radius;
+    //xây dựng phương thưức trả về bán kính của đường tròn
+    this.getRadius = function () {
+      return radius;
+    }
+    // Xây dựng phương thức diện tích hình tròn
+    this.getArea = function () {
+      return Math.PI * radius * radius;
+    }
+  };
+  // Su dung lop vua tao. tao doi tuong hinh tron voi ban kinh la 2
+  let circle = new Circle(2);
+  //truy cap phuong thuc cua lop hinh tron vua tao va gan cho cac  ieen radius, area
+  let radius = circle.getRadius();//2
+  let area = circle.getArea();
+  // Hien thi ban kinh va dien tich
+  alert("radius:" + radius + ";area:" + area);
+
+</script>
+</body>
+</html>
