@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trò chơi Con Rắn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+    }
+    #gameCanvas {
+      border: 2px solid #333;
+      background-color: #fff;
+      display: block;
+      margin: 20px auto;
+    }
+    #score {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+<h1>Trò chơi Con Rắn</h1>
+<canvas id="gameCanvas" width="400" height="400"></canvas>
+<div id="score">Điểm: 0</div>
+
+<script>
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let snake = [{ x: 10, y: 10 }];
+  let direction = { x: 1, y: 0 }; // ban đầu di chuyển sang phải
+  let food = { x: 15, y: 15 };
+  let score = 0;
+  let cellSize = 20;
+  let gameInterval;
+
+  function drawRect(x, y, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+  }
+
+  function drawSnake() {
+    snake.forEach(part => drawRect(part.x, part.y, 'green'));
+  }
+
+  function drawFood() {
+    drawRect(food.x, food.y, 'red');
+  }
+
+  // Hàm tạo thức ăn mới
+  function generateFood() {
+    food.x = Math.floor(Math.random() * (canvas.width / cellSize));
+    food.y = Math.floor(Math.random() * (canvas.height / cellSize));
+    // Đảm bảo thức ăn không nằm trên thân rắn
+    if (snake.some(part => part.x === food.x && part.y === food.y)) {
+      generateFood();
+    }
+  }
+
+  // Hàm xử lý di chuyển rắn
+  function moveSnake() {
+    const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
+
+    // Kiểm tra va chạm tường
+    if (head.x < 0 || head.x >= canvas.width / cellSize || head.y < 0 || head.y >= canvas.height / cellSize) {
+      alert('Bạn đã thua! Trò chơi kết thúc.');
+      clearInterval(gameInterval);
+      return;
+    }
+
+    // Kiểm tra va chạm chính mình
+    if (snake.some(part => part.x === head.x && part.y === head.y)) {
+      alert('Bạn đã thua! Trò chơi kết thúc.');
+      clearInterval(gameInterval);
+      return;
+    }
+
+    snake.unshift(head); // Thêm đầu mới
+
+    //Kiểm tra ăn thức ăn
+    if (head.x === food.x && head.y === food.y) {
+      score++;
+      document.getElementById('score').innerText = 'Điểm: ' + score;
+      generateFood();
+    } else {
+      snake.pop(); // Loại bỏ phần đuôi
+    }
+  }
+
+  // Xử lý điều khiển
+  document.addEventListener('keydown', (e) => {
+    const key = e.key;
+    // Không cho rắn quay lại chính nó
+    if (key === 'ArrowUp' && direction.y !== 1) {
+      direction = { x: 0, y: -1 };
+    } else if (key === 'ArrowDown' && direction.y !== -1) {
+      direction = { x: 0, y: 1 };
+    } else if (key === 'ArrowLeft' && direction.x !== 1) {
+      direction = { x: -1, y: 0 };
+    } else if (key === 'ArrowRight' && direction.x !== -1) {
+      direction = { x: 1, y: 0 };
+    }
+  });
+
+  // Vẽ toàn bộ game
+  function gameLoop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    moveSnake();
+    drawSnake();
+    drawFood();
+  }
+
+  generateFood(); // Tạo thức ăn ban đầu
+  gameInterval = setInterval(gameLoop, 200); // tốc độ game
+
+</script>
+</body>
+</html>

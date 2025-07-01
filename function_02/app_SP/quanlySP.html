@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<form action="#">
+  <input type="text" name="maSanPham" id="maSanPham" placeholder="Ma san pham">
+  <input type="text" name="tenSanPham" id="tenSanPham" placeholder="Ten san pham">
+  <input type="number" name="giaSanPham" id="giaSanPham" placeholder="Gia san pham">
+  <button type="button" onclick="luuSanPham()">Save</button>
+</form>
+
+<table id="bangSanPham">
+  <thead>
+  <tr>
+    <th>Ma</th>
+    <th>Ten san pham</th>
+    <th>Gia san pham</th>
+    <th>Hanh dong</th>
+  </tr>
+  </thead>
+  <tbody id="duLieu"></tbody>
+</table>
+<script src="manager.js"></script>
+</body>
+</html>
